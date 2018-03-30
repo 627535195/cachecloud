@@ -399,8 +399,8 @@ public class RedisDeployCenterImpl implements RedisDeployCenter {
     }
 
     private boolean runInstance(AppDesc appDesc, String host, Integer port, int maxMemory, boolean isCluster) {
-    		long appId = appDesc.getAppId();
-    		String password = appDesc.getPassword();
+        long appId = appDesc.getAppId();
+        String password = appDesc.getPassword();
         // 生成配置
         List<String> configs = handleCommonConfig(port, maxMemory);
         if (isCluster) {
