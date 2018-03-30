@@ -436,8 +436,8 @@ public class RedisDeployCenterImpl implements RedisDeployCenter {
         }
         //启动实例
         logger.info("masterShell:host={};shell={}", host, runShell);
-        boolean isMasterShell = machineCenter.startProcessAtPort(host, port, runShell);
-        if (!isMasterShell) {
+        boolean isExeSuccess = machineCenter.startProcessAtPort(host, port, runShell);
+        if (!isExeSuccess) {
             logger.error("runShell={} error,{}:{}", runShell, host, port);
             return false;
         }
@@ -479,9 +479,9 @@ public class RedisDeployCenterImpl implements RedisDeployCenter {
     }
 
     private boolean runSentinel(AppDesc appDesc, String sentinelHost, String masterName, String masterHost, Integer masterPort) {
-    		//应用信息
-    		long appId = appDesc.getAppId();
-    		String password = appDesc.getPassword();
+        //应用信息
+        long appId = appDesc.getAppId();
+        String password = appDesc.getPassword();
     	
         //启动sentinel实例
         Integer sentinelPort = machineCenter.getAvailablePort(sentinelHost, ConstUtils.CACHE_REDIS_SENTINEL);
