@@ -8,7 +8,7 @@ package com.sohu.cache.util;
 import com.google.common.io.BaseEncoding;
 
 /**
- * hex/base64 编解码工具集，依赖Guava, 取消了对Commmon Codec的依赖
+ * hex/base64 编解码工具集，依赖Guava
  */
 public abstract class EncodeUtil {
 
