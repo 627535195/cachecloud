@@ -7,12 +7,16 @@
   </parent>
   <artifactId>cachecloud-open-common</artifactId>
   <name>cachecloud-open-common</name>
-  
+
   <dependencies>
 		<dependency>
 			<artifactId>slf4j-api</artifactId>
 			<groupId>org.slf4j</groupId>
 		</dependency>
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+      </dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
